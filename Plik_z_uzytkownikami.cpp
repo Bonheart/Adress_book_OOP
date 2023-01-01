@@ -1,4 +1,5 @@
 #include "Plik_z_uzytkownikami.h"
+#include <fstream>
 
 Plik_z_uzytkownikami::Plik_z_uzytkownikami(){
 
@@ -49,4 +50,58 @@ string Plik_z_uzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionow
     liniaZDanymiUzytkownika += uzytkownik.pobierz_haslo() + '|';
 
     return liniaZDanymiUzytkownika;
+}
+
+
+void Plik_z_uzytkownikami::wczytajUzytkownikowZPliku(vector <Uzytkownik> &uzytkownicy)
+{
+    Uzytkownik uzytkownik;
+    string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
+
+    fstream plikTekstowy;
+    plikTekstowy.open(nazwaPlikuZUzytkownikami.c_str(), ios::in);
+
+    if (plikTekstowy.good() == true)
+    {
+        while (getline(plikTekstowy, daneJednegoUzytkownikaOddzielonePionowymiKreskami))
+        {
+            uzytkownik = pobierzDaneUzytkownika(daneJednegoUzytkownikaOddzielonePionowymiKreskami);
+            uzytkownicy.push_back(uzytkownik);
+        }
+    }
+    plikTekstowy.close();
+}
+
+
+Uzytkownik Plik_z_uzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami)
+{
+    Uzytkownik uzytkownik;
+    string pojedynczaDanaUzytkownika = "";
+    int numerPojedynczejDanejUzytkownika = 1;
+
+    for (int pozycjaZnaku = 0; pozycjaZnaku < daneJednegoUzytkownikaOddzielonePionowymiKreskami.length(); pozycjaZnaku++)
+    {
+        if (daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku] != '|')
+        {
+            pojedynczaDanaUzytkownika += daneJednegoUzytkownikaOddzielonePionowymiKreskami[pozycjaZnaku];
+        }
+        else
+        {
+            switch(numerPojedynczejDanejUzytkownika)
+            {
+            case 1:
+                uzytkownik.ustaw_id(atoi(pojedynczaDanaUzytkownika.c_str()));
+                break;
+            case 2:
+                uzytkownik.ustaw_login(pojedynczaDanaUzytkownika);
+                break;
+            case 3:
+                uzytkownik.ustaw_haslo(pojedynczaDanaUzytkownika);
+                break;
+            }
+            pojedynczaDanaUzytkownika = "";
+            numerPojedynczejDanejUzytkownika++;
+        }
+    }
+    return uzytkownik;
 }

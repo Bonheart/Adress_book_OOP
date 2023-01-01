@@ -1,5 +1,6 @@
 #include <iostream>
-
+#ifndef METODY_POMOCNICZE.H
+#define METODY_POMOCNICZE.H
 using namespace std;
 
 
@@ -10,3 +11,4 @@ public:
 
 
 };
+#endif
