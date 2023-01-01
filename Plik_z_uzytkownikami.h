@@ -22,7 +22,7 @@ private:
 public:
     Plik_z_uzytkownikami();
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownicy);
-    void wczytajUzytkownikowZPliku(vector <Uzytkownik>&uzytkownicy);
+    vector <Uzytkownik> wczytajUzytkownikowZPliku();
 
 };
 #endif

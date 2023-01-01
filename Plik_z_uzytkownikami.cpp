@@ -53,9 +53,10 @@ string Plik_z_uzytkownikami::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionow
 }
 
 
-void Plik_z_uzytkownikami::wczytajUzytkownikowZPliku(vector <Uzytkownik> &uzytkownicy)
+vector <Uzytkownik> Plik_z_uzytkownikami::wczytajUzytkownikowZPliku()
 {
     Uzytkownik uzytkownik;
+    vector <Uzytkownik> uzytkownicy;
     string daneJednegoUzytkownikaOddzielonePionowymiKreskami = "";
 
     fstream plikTekstowy;
@@ -70,6 +71,7 @@ void Plik_z_uzytkownikami::wczytajUzytkownikowZPliku(vector <Uzytkownik> &uzytko
         }
     }
     plikTekstowy.close();
+    return uzytkownicy;
 }
 
 
