@@ -1,12 +1,6 @@
 #include "Plik_z_uzytkownikami.h"
 #include <fstream>
 
-Plik_z_uzytkownikami::Plik_z_uzytkownikami(){
-
-    nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
-
-}
-
 bool Plik_z_uzytkownikami::czyPlikJestPusty(fstream &plikTekstowy)
 {
     plikTekstowy.seekg(0, ios::end);
