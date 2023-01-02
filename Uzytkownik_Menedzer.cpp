@@ -6,7 +6,6 @@ void UzytkownikMenedzer::rejestracjaUzytkownika() {
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
 
     uzytkownicy.push_back(uzytkownik);
-    Plik_z_uzytkownikami plikZUzytkownikami;
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
 
     cout << "Konto zalozono pomyslnie" << endl;
@@ -45,8 +44,6 @@ int UzytkownikMenedzer::pobierzIdNowegoUzytkownika() {
 
 }
 
-
-
 bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
 
     for (int i = 0; i < uzytkownicy.size(); i++) {
@@ -73,7 +70,6 @@ void UzytkownikMenedzer::wypisz_wszystkich_uzytkownikow(){
 
 void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
 
-
-  uzytkownicy = PlikZUzytkownikami.wczytajUzytkownikowZPliku(); // obiekt PlikZUzytkownikami
+  uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku(); // obiekt PlikZUzytkownikami
 
 }
