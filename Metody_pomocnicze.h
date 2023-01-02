@@ -4,11 +4,13 @@
 using namespace std;
 
 
-class Metody_pomocnicze{
+class Metody_pomocnicze {
 
 public:
-   static string konwerjsaIntNaString(int liczba);
-
+    static string konwerjsaIntNaString(int liczba);
+    string wczytajLinie();
 
 };
+
+
 #endif

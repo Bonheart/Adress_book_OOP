@@ -4,10 +4,12 @@
 using namespace std;
 
 int main() {
-    Ksiazka_adresowa KsiazkaAdresowa("Uzytkownicy.txt");
-    KsiazkaAdresowa.wypisz_wszystkich_uzytkownikow();
-    KsiazkaAdresowa.rejestracjaUzytkownika();
-    KsiazkaAdresowa.wypisz_wszystkich_uzytkownikow();
+    Ksiazka_adresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    ksiazkaAdresowa.wypisz_wszystkich_uzytkownikow();
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.wypisz_wszystkich_uzytkownikow();
+    ksiazkaAdresowa.dodajAdresata();
+
 
     return 0;
 }
