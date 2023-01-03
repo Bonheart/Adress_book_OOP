@@ -24,7 +24,7 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
         cin >> login;
         uzytkownik.ustaw_login(login);
 
-    } while (czyIstniejeLogin( uzytkownik.pobierz_login()) == true);
+    } while (czyIstniejeLogin(uzytkownik.pobierz_login()) == true);
 
     string haslo;
     cout << "Podaj haslo: ";

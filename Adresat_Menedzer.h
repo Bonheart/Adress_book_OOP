@@ -3,25 +3,23 @@
 
 #include <iostream>
 #include <vector>
-#include "Adresat_Menedzer.h"
 #include "Adresaci.h"
-
-
 
 class AdresatMenedzer {
 
 private:
-
     vector <Adresat> adresaci;
+    Adresat podajDaneNowegoAdresata();
+    void wyswietlDaneAdresata(Adresat adresat);
+
 
 public:
-    Adresat dodajAdresata();
-    Adresat podajDaneNowegoAdresata();
+
+    void dodajAdresata();
     int idOstatniegoAdresata();
+    int idZalogowanegoUzytkownika;
+    void wyswietlWszystkichAdresatow();
 
 };
-
-
-
 
 #endif // ADRESAT_MENEDZER

@@ -1,6 +1,6 @@
 #include "Adresaci.h"
 
-int Adresat::ustaw_id(int nowe_id_adresata){
+void Adresat::ustaw_id(int nowe_id_adresata){
 
     if(nowe_id_adresata >= 0){
 
@@ -8,7 +8,7 @@ int Adresat::ustaw_id(int nowe_id_adresata){
     }
 }
 
-int Adresat::ustaw_id_zalogowanego_uzytkownika(int nowe_id_zalogwanego_uzytkownika){
+void Adresat::ustaw_id_zalogowanego_uzytkownika(int nowe_id_zalogwanego_uzytkownika){
 
     idUzytkownika = nowe_id_zalogwanego_uzytkownika;
 
