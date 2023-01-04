@@ -37,20 +37,6 @@ int Metody_pomocnicze::konwersjaStringNaInt(string liczba)
     return liczbaInt;
 }
 
-string Metody_pomocnicze::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat)
-{
-    string liniaZDanymiAdresata = "";
-
-    liniaZDanymiAdresata += konwerjsaIntNaString(adresat.pobierz_id()) + '|';
-    liniaZDanymiAdresata += konwerjsaIntNaString(adresat.pobierz_id_zalogowanego_uzytkownika()) + '|';
-    liniaZDanymiAdresata += adresat.pobierz_imie() + '|';
-    liniaZDanymiAdresata += adresat.pobierz_nazwisko() + '|';
-    liniaZDanymiAdresata += adresat.pobierz_nr_telefonu() + '|';
-    liniaZDanymiAdresata += adresat.pobierz_email() + '|';
-    liniaZDanymiAdresata += adresat.pobierz_adres() + '|';
-
-    return liniaZDanymiAdresata;
-}
 
 string Metody_pomocnicze::pobierzLiczbe(string tekst, int pozycjaZnaku)
 {

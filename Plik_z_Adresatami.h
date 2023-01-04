@@ -1,26 +1,35 @@
+#ifndef PLIK_Z_ADRESATAMI.H
+#define PLIK_Z_ADRESATAMI.H
+
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include <cstdlib>
 
 
 #include "Adresaci.h"
-#include "Adresat_Menedzer.h"
+#include "Metody_pomocnicze.h"
 
 
 using namespace std;
 
+
+
 class Plik_z_adresatami{
 
-    vector <Adresat> adresaci;
-    string nazwaPlikuZAdresatami;
+    string nazwaPlikuZAdresatami = "Adresat.txt";
     fstream plikTekstowy;
-
     bool czyPlikJestPusty(fstream &plikTekstowy);
+    Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
+    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    int idOstatniegoAdresata();
 
 public:
+    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku( int idZalogowanegoUzytkownika);
+    string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     void dopiszAdresataDoPliku(Adresat adresat);
-    int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-
+    int pobierzidOstatniegoAdresata();
 
 };
+
+#endif // PLIK_Z_ADRESATAMI
