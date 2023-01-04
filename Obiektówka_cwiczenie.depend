@@ -4,11 +4,11 @@
 	"Adresaci.h"
 	"Adresat_Menedzer.h"
 
-1672773770 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\main.cpp
+1672851963 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\main.cpp
 	<iostream>
 	"Ksiazka_adresowa.h"
 
-1672773816 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\ksiazka_adresowa.h
+1672850885 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\ksiazka_adresowa.h
 	<iostream>
 	"Uzytkownik_Menedzer.h"
 	"Adresat_Menedzer.h"
@@ -34,11 +34,11 @@
 	"Uzytkownik.h"
 	"Metody_pomocnicze.h"
 
-1672769037 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\metody_pomocnicze.h
+1672853959 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\metody_pomocnicze.h
 	<iostream>
 	"Adresaci.h"
 
-1672769619 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\metody_pomocnicze.cpp
+1672853976 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\metody_pomocnicze.cpp
 	"Metody_pomocnicze.h"
 	<sstream>
 	<algorithm>
@@ -47,35 +47,36 @@
 	"Plik_z_uzytkownikami.h"
 	<fstream>
 
-1672758660 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\uzytkownik_menedzer.cpp
+1672775974 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\uzytkownik_menedzer.cpp
 	"Uzytkownik_Menedzer.h"
 	"Plik_z_uzytkownikami.h"
 
-1672773694 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\adresat_menedzer.h
+1672851544 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\adresat_menedzer.h
 	<iostream>
 	<vector>
 	"Adresaci.h"
+	"Plik_z_Adresatami.h"
 
-1672689656 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\adresaci.h
+1672775974 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\adresaci.h
 	<iostream>
 
-1672768878 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\plik_z_adresatami.cpp
+1672854103 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\plik_z_adresatami.cpp
 	"Plik_z_Adresatami.h"
 	"Metody_pomocnicze.h"
+	"Adresaci.h"
 
-1672773599 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\adresat_menedzer.cpp
+1672851435 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\adresat_menedzer.cpp
 	"Adresat_Menedzer.h"
 	"Metody_pomocnicze.h"
 	"Plik_z_Adresatami.h"
 
-1672689605 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\adresaci.cpp
+1672775974 source:c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\adresaci.cpp
 	"Adresaci.h"
 
-1672768618 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\plik_z_adresatami.h
+1672855993 c:\users\hp\documents\dokumenty\programowanie\codeblocks\c++\c++\ksiazka_adresowa_obiektowo\ksiazka_adresowa_obiektowka\obiektówka_cwiczenie\plik_z_adresatami.h
 	<iostream>
 	<vector>
 	<fstream>
-	<cstdlib>
 	"Adresaci.h"
-	"Adresat_Menedzer.h"
+	"Metody_pomocnicze.h"
 

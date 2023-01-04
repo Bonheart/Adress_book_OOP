@@ -5,25 +5,24 @@
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
+    Plik_z_adresatami pliczek_z_adresatami;
 
     Metody_pomocnicze metoda_pomocnicza;
 
-    int nowe_id = 0;
-   // adresat.ustaw_id = idOstatniegoAdresata++; // hmm??? nie pobieram nic z pliku poki co. moze wartaloby po prostu dodac...?
-    adresat.ustaw_id(nowe_id + 1);
-  //  adresat.ustaw_id_zalogowanego_uzytkownika (pobierzIdNowegoUzytkownika);
+    adresat.ustaw_id(pliczek_z_adresatami.pobierzidOstatniegoAdresata()+1); // hmm??? nie pobieram nic z pliku poki co. moze wartaloby po prostu dodac...?
+//    adresat.ustaw_id_zalogowanego_uzytkownika (pobierzIdNowegoUzytkownika);
 
     string nowe_imie = "";
     cout << "Podaj imie: ";
     nowe_imie = metoda_pomocnicza.wczytajLinie();
+    nowe_imie = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_imie); // made it aswell
     adresat.ustaw_imie(nowe_imie);
- //   adresat.ustaw_imie(nowe_imie) = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.ustaw_imie(nowe_imie));
 
     string nowe_nazwisko= "";
     cout << "Podaj nazwisko: ";
     nowe_nazwisko = metoda_pomocnicza.wczytajLinie();
+    nowe_nazwisko = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_nazwisko); // i made it :)
     adresat.ustaw_nazwisko(nowe_nazwisko);
-    //adresat.ustaw_nazwisko(nowe_nazwisko) = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.ustaw_nazwisko(nowe_nazwisko));
 
     string nowy_nr= "";
     cout << "Podaj numer telefonu: ";
