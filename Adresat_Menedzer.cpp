@@ -9,8 +9,9 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
     Metody_pomocnicze metoda_pomocnicza;
 
-    adresat.ustaw_id(pliczek_z_adresatami.pobierzidOstatniegoAdresata()+1); // hmm??? nie pobieram nic z pliku poki co. moze wartaloby po prostu dodac...?
-//    adresat.ustaw_id_zalogowanego_uzytkownika (pobierzIdNowegoUzytkownika);
+
+    adresat.ustaw_id(pliczek_z_adresatami.pobierz_ostatnie_id_adresata()+1); // hmm??? nie pobieram nic z pliku poki co. moze wartaloby po prostu dodac...?
+   // adresat.ustaw_id_zalogowanego_uzytkownika (pobierzIdNowegoUzytkownika);
 
     string nowe_imie = "";
     cout << "Podaj imie: ";

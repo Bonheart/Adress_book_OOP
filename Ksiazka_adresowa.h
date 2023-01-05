@@ -13,9 +13,13 @@ public:
 
     Ksiazka_adresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
 
-        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+       uzytkownikMenedzer.wczytajUzytkownikowZPliku();
     };
 
+ //  Ksiazka_adresowa(string nazwaPlikuZAdresatami): adresat_menedzer(nazwaPlikuZAdresatami) {
+
+ //       adresat_menedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+ // };
 
 
     void rejestracjaUzytkownika();

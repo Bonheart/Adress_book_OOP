@@ -22,13 +22,13 @@ class Plik_z_adresatami{
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    int idOstatniegoAdresata();
+    int idOstatniegoAdresata;
 
 public:
-    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku( int idZalogowanegoUzytkownika);
+    vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     void dopiszAdresataDoPliku(Adresat adresat);
-    int pobierzidOstatniegoAdresata();
+    int pobierz_ostatnie_id_adresata();
 
 };
 

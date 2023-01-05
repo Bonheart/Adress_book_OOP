@@ -143,13 +143,24 @@ void Plik_z_adresatami::dopiszAdresataDoPliku(Adresat adresat)
     {
         cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
     }
+
     idOstatniegoAdresata++;
+
     plikTekstowy.close();
     system("pause");
 }
 
 
-int Plik_z_adresatami::pobierzidOstatniegoAdresata()
+int Plik_z_adresatami::pobierz_ostatnie_id_adresata()
 {
     return idOstatniegoAdresata;
+}
+
+bool Plik_z_adresatami::czyPlikJestPusty(fstream &plikTekstowy)
+{
+    plikTekstowy.seekg(0, ios::end);
+    if (plikTekstowy.tellg() == 0)
+        return true;
+    else
+        return false;
 }

@@ -16,13 +16,13 @@ private:
     void wyswietlDaneAdresata(Adresat adresat);
 
     Adresat pobierzDaneAdresata();
+    Plik_z_adresatami pliczek_z_adresatami;
 
 
 public:
 
   //  AdresatMenedzer(string nazwaPlikuZAdresatami) : pliczek_z_adresatami(nazwaPlikuZAdresatami){};
     void dodajAdresata();
-    int idOstatniegoAdresata();
     int idZalogowanegoUzytkownika;
     void wyswietlWszystkichAdresatow();
 
