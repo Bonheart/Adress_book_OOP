@@ -5,11 +5,11 @@
 #include <vector>
 #include "Adresaci.h"
 #include "Plik_z_Adresatami.h"
+#include "Uzytkownik_Menedzer.h"
 
 
 class AdresatMenedzer {
 
-private:
     vector <Adresat> adresaci;
     Adresat podajDaneNowegoAdresata();
 
@@ -18,13 +18,13 @@ private:
     Adresat pobierzDaneAdresata();
     Plik_z_adresatami pliczek_z_adresatami;
 
-
 public:
 
-  //  AdresatMenedzer(string nazwaPlikuZAdresatami) : pliczek_z_adresatami(nazwaPlikuZAdresatami){};
+    const int idZalogowanegoUzytkownika;
+    AdresatMenedzer(string nazwaPlikuZAdresatami) : pliczek_z_adresatami(nazwaPlikuZAdresatami){};
     void dodajAdresata();
-    int idZalogowanegoUzytkownika;
     void wyswietlWszystkichAdresatow();
+    int wczytajAdresatowZalogowanegoUzytkownikaZPliku();
 
 };
 

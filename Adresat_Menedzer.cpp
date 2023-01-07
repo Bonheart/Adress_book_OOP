@@ -5,12 +5,12 @@
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
-    Plik_z_adresatami pliczek_z_adresatami;
+  //  Plik_z_adresatami pliczek_z_adresatami;
 
     Metody_pomocnicze metoda_pomocnicza;
 
 
-    adresat.ustaw_id(pliczek_z_adresatami.pobierz_ostatnie_id_adresata()+1); // hmm??? nie pobieram nic z pliku poki co. moze wartaloby po prostu dodac...?
+    adresat.ustaw_id(pliczek_z_adresatami.pobierz_ostatnie_id_adresata()+1); // hmm??? nie pobieram nic z pliku poki co. moze wartaloby po prostu zadeklarowac nowe_id = 0?
    // adresat.ustaw_id_zalogowanego_uzytkownika (pobierzIdNowegoUzytkownika);
 
     string nowe_imie = "";
@@ -46,7 +46,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
-    Plik_z_adresatami pliczek_z_adresatami;
+//    Plik_z_adresatami pliczek_z_adresatami;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
@@ -88,4 +88,3 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Email:              " << adresat.pobierz_email() << endl;
     cout << "Adres:              " << adresat.pobierz_adres() << endl;
 }
-

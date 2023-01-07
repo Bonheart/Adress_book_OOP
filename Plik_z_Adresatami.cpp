@@ -164,3 +164,4 @@ bool Plik_z_adresatami::czyPlikJestPusty(fstream &plikTekstowy)
     else
         return false;
 }
+

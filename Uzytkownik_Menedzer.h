@@ -1,3 +1,7 @@
+#ifndef UZYTKOWNIK_MENEDZER.H
+#define UZYTKOWNIK_MENEDZER.H
+
+
 #include <iostream>
 #include <vector>
 #include "Uzytkownik.h"
@@ -28,5 +32,7 @@ public:
     void wypisz_wszystkich_uzytkownikow();
     void wczytajUzytkownikowZPliku();
 
-
 };
+
+
+#endif // UZYTKOWNIK_MENEDZER
