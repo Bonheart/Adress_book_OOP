@@ -5,7 +5,7 @@
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
-  //  Plik_z_adresatami pliczek_z_adresatami;
+//    Plik_z_adresatami pliczek_z_adresatami;
 
     Metody_pomocnicze metoda_pomocnicza;
 
@@ -16,13 +16,13 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
     string nowe_imie = "";
     cout << "Podaj imie: ";
     nowe_imie = metoda_pomocnicza.wczytajLinie();
-    nowe_imie = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_imie); // made it aswell
+    nowe_imie = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_imie);
     adresat.ustaw_imie(nowe_imie);
 
     string nowe_nazwisko= "";
     cout << "Podaj nazwisko: ";
     nowe_nazwisko = metoda_pomocnicza.wczytajLinie();
-    nowe_nazwisko = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_nazwisko); // i made it :)
+    nowe_nazwisko = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_nazwisko);
     adresat.ustaw_nazwisko(nowe_nazwisko);
 
     string nowy_nr= "";
@@ -46,7 +46,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
-//    Plik_z_adresatami pliczek_z_adresatami;
+  //  Plik_z_adresatami pliczek_z_adresatami;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
@@ -87,4 +87,10 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Numer telefonu:     " << adresat.pobierz_nr_telefonu() << endl;
     cout << "Email:              " << adresat.pobierz_email() << endl;
     cout << "Adres:              " << adresat.pobierz_adres() << endl;
+}
+
+void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(){
+
+    adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(AdresatMenedzer::idZalogowanegoUzytkownika);
+
 }

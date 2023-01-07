@@ -1,23 +1,28 @@
 #include <iostream>
 #include "Uzytkownik_Menedzer.h"
 #include "Adresat_Menedzer.h"
+#include "Adresaci.h"
+#include "Plik_z_Adresatami.h"
+
 
 using namespace std;
 
 class Ksiazka_adresowa {
 
   //  UzytkownikMenedzer uzytkownikMenedzer;
-    AdresatMenedzer adresat_menedzer;
+   AdresatMenedzer adresat_menedzer;
 
 public:
 
  //   Ksiazka_adresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
-   //  uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+
+   // uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+
     //};
 
-   Ksiazka_adresowa(string nazwaPlikuZAdresatami):adresat_menedzer(nazwaPlikuZAdresatami) {
+Ksiazka_adresowa(string nazwaPlikuZAdresatami): adresat_menedzer(nazwaPlikuZAdresatami) {
 
-        adresat_menedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+    adresat_menedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
 
   };
 
@@ -29,4 +34,5 @@ public:
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void wyswietlDaneAdresata();
+    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
 };

@@ -25,12 +25,14 @@ class Plik_z_adresatami{
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
 
 public:
-     Plik_z_adresatami(string NOWY) : nazwaPlikuZAdresatami(NOWY){};
+
+    Plik_z_adresatami(string NOWY) : nazwaPlikuZAdresatami(NOWY){};
     vector <Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     void dopiszAdresataDoPliku(Adresat adresat);
     int pobierz_ostatnie_id_adresata();
     int idOstatniegoAdresata;
+
 };
 
 #endif // PLIK_Z_ADRESATAMI

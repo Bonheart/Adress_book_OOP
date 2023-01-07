@@ -31,7 +31,7 @@ public:
     void rejestracjaUzytkownika();
     void wypisz_wszystkich_uzytkownikow();
     void wczytajUzytkownikowZPliku();
-
+    void pobierzIdZalogowanegoUzytkownika();
 };
 
 

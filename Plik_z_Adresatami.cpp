@@ -6,7 +6,7 @@
 Adresat Plik_z_adresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami)
 {
     Adresat adresat;
-    Metody_pomocnicze metoda_pomocnicza;
+
     string pojedynczaDanaAdresata = "";
     int numerPojedynczejDanejAdresata = 1;
 
@@ -67,7 +67,7 @@ vector <Adresat> Plik_z_adresatami::wczytajAdresatowZalogowanegoUzytkownikaZPlik
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
+    plikTekstowy.open("Adresat.txt", ios::in);
 
     if (plikTekstowy.good() == true)
     {
@@ -164,4 +164,3 @@ bool Plik_z_adresatami::czyPlikJestPusty(fstream &plikTekstowy)
     else
         return false;
 }
-
