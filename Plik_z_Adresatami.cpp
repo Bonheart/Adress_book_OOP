@@ -63,21 +63,21 @@ vector <Adresat> Plik_z_adresatami::wczytajAdresatowZalogowanegoUzytkownikaZPlik
 {
     Adresat adresat;
     vector <Adresat> adresaci;
-    int idOstatniegoAdresata = 0;
+  //  int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
-    plikTekstowy.open("Adresat.txt", ios::in);
+    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
 
     if (plikTekstowy.good() == true)
     {
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
         {
-            if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
-            {
+          //  if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
+          //  {
                 adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
                 adresaci.push_back(adresat);
-            }
+          //  }
         }
         daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
     }

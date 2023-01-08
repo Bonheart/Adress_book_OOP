@@ -1,4 +1,7 @@
 #include <iostream>
+#include <sstream>
+#include <algorithm>
+
 #ifndef METODY_POMOCNICZE.H
 #define METODY_POMOCNICZE.H
 
@@ -11,10 +14,9 @@ class Metody_pomocnicze {
 
 public:
     static string konwerjsaIntNaString(int liczba);
-    string wczytajLinie();
+    static string wczytajLinie();
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     int konwersjaStringNaInt(string liczba);
-    Metody_pomocnicze metoda_pomocnicza();
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
 
 };

@@ -9,20 +9,20 @@ using namespace std;
 
 class Ksiazka_adresowa {
 
-  //  UzytkownikMenedzer uzytkownikMenedzer;
+ //  UzytkownikMenedzer uzytkownikMenedzer;
    AdresatMenedzer adresat_menedzer;
 
 public:
 
- //   Ksiazka_adresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
+  //  Ksiazka_adresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
 
-   // uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+ //   uzytkownikMenedzer.wczytajUzytkownikowZPliku();
 
-    //};
+  //  };
 
-Ksiazka_adresowa(string nazwaPlikuZAdresatami): adresat_menedzer(nazwaPlikuZAdresatami) {
+ Ksiazka_adresowa(string nazwaPlikuZAdresatami):adresat_menedzer(nazwaPlikuZAdresatami) {
 
-    adresat_menedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
+   adresat_menedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
 
   };
 
@@ -34,5 +34,6 @@ Ksiazka_adresowa(string nazwaPlikuZAdresatami): adresat_menedzer(nazwaPlikuZAdre
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void wyswietlDaneAdresata();
-    int wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
+    void zmianaHaslaZalogowanegoUzytkownika();
 };

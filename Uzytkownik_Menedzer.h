@@ -25,13 +25,16 @@ private:
     Plik_z_uzytkownikami plikZUzytkownikami;
 
 
+
 public:
 
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){};
     void rejestracjaUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
     void wypisz_wszystkich_uzytkownikow();
     void wczytajUzytkownikowZPliku();
     void pobierzIdZalogowanegoUzytkownika();
+
 };
 
 

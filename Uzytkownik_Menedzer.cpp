@@ -1,5 +1,4 @@
 #include "Uzytkownik_Menedzer.h"
-#include "Plik_z_uzytkownikami.h"
 
 void UzytkownikMenedzer::rejestracjaUzytkownika() {
 
@@ -72,4 +71,23 @@ void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
 
   uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 
+}
+
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
+{
+
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = Metody_pomocnicze::wczytajLinie();
+
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        if (itr -> pobierz_Id() == idZalogowanegoUzytkownika)
+        {
+            itr -> ustaw_haslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
