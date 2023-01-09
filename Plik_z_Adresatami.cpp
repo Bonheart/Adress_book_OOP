@@ -63,7 +63,6 @@ vector <Adresat> Plik_z_adresatami::wczytajAdresatowZalogowanegoUzytkownikaZPlik
 {
     Adresat adresat;
     vector <Adresat> adresaci;
-  //  int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
@@ -73,11 +72,11 @@ vector <Adresat> Plik_z_adresatami::wczytajAdresatowZalogowanegoUzytkownikaZPlik
     {
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami))
         {
-          //  if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
-          //  {
-                adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
+         //  if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))
+         //   {
+               adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
                 adresaci.push_back(adresat);
-          //  }
+           // }
         }
         daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
     }

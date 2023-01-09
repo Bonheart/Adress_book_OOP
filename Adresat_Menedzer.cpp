@@ -1,6 +1,7 @@
 #include "Adresat_Menedzer.h"
 #include "Metody_pomocnicze.h"
 #include "Plik_z_Adresatami.h"
+#include "Uzytkownik_Menedzer.h"
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
@@ -11,7 +12,7 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 
 
     adresat.ustaw_id(pliczek_z_adresatami.pobierz_ostatnie_id_adresata()+1); // hmm??? nie pobieram nic z pliku poki co. moze wartaloby po prostu zadeklarowac nowe_id = 0?
-   // adresat.ustaw_id_zalogowanego_uzytkownika (pobierzIdNowegoUzytkownika);
+ //   adresat.ustaw_id_zalogowanego_uzytkownika (idZalogowanegoUzytkownika);
 
     string nowe_imie = "";
     cout << "Podaj imie: ";
