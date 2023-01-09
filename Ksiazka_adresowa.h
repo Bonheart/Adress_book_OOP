@@ -8,7 +8,7 @@ using namespace std;
 class Ksiazka_adresowa {
 
     UzytkownikMenedzer uzytkownikMenedzer;
-   AdresatMenedzer adresat_menedzer;
+  // AdresatMenedzer adresat_menedzer;
 
 public:
 
@@ -18,13 +18,13 @@ public:
 
    };
 
-
+/*
 Ksiazka_adresowa(string nazwaPlikuZAdresatami):adresat_menedzer(nazwaPlikuZAdresatami) {
 
  adresat_menedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
 
  };
-
+*/
 
     void rejestracjaUzytkownika();
     void wypisz_wszystkich_uzytkownikow();
