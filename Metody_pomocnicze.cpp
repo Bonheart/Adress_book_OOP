@@ -14,6 +14,7 @@ string Metody_pomocnicze::konwerjsaIntNaString(int liczba)
 string Metody_pomocnicze::wczytajLinie()
 {
     string wejscie = "";
+    cin.sync();
     getline(cin, wejscie);
     return wejscie;
 }

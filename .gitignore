@@ -2,10 +2,12 @@
 Obiektówka_cwiczenie.cbp
 obj
 bin
-Obiektówka_cwiczenie.cscope_file_list
-Obiektówka_cwiczenie_depend
-Obiektówka_cwiczenie.layout
+1.cscope_file_list
+2.depend
+3.layout
 Uzytkownicy.txt
 README.md
 Adress_book_OOP
 Adresat.txt
+ks-strukt.cpp
+obj/Debug

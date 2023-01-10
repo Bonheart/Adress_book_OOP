@@ -8,23 +8,15 @@ using namespace std;
 class Ksiazka_adresowa {
 
     UzytkownikMenedzer uzytkownikMenedzer;
-  // AdresatMenedzer adresat_menedzer;
+   AdresatMenedzer adresat_menedzer;
 
 public:
 
-    Ksiazka_adresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami) {
+    Ksiazka_adresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresat_menedzer(nazwaPlikuZAdresatami){
 
         uzytkownikMenedzer.wczytajUzytkownikowZPliku();
 
    };
-
-/*
-Ksiazka_adresowa(string nazwaPlikuZAdresatami):adresat_menedzer(nazwaPlikuZAdresatami) {
-
- adresat_menedzer.wczytajAdresatowZalogowanegoUzytkownikaZPliku();
-
- };
-*/
 
     void rejestracjaUzytkownika();
     void wypisz_wszystkich_uzytkownikow();

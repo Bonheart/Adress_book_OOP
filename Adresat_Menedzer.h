@@ -1,5 +1,5 @@
-#ifndef ADRESAT_MENEDZER.H
-#define ADRESAT_MENEDZER.H
+#ifndef ADRESATMENEDZER_H
+#define ADRESATMENEDZER_H
 
 #include <iostream>
 #include <vector>
@@ -21,7 +21,6 @@ class AdresatMenedzer {
 public:
 
     int idZalogowanegoUzytkownika;
-
     AdresatMenedzer (string nazwaPlikuZAdresatami) : pliczek_z_adresatami(nazwaPlikuZAdresatami){};
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();

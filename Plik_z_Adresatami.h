@@ -1,5 +1,5 @@
-#ifndef PLIK_Z_ADRESATAMI.H
-#define PLIK_Z_ADRESATAMI.H
+#ifndef PLIKZADRESATAMI_H
+#define PLIKZADRESATAMI_H
 
 #include <iostream>
 #include <vector>
@@ -8,7 +8,7 @@
 
 #include "Adresaci.h"
 #include "Metody_pomocnicze.h"
-#include "Uzytkownik_Menedzer.h"
+
 
 
 using namespace std;
@@ -23,6 +23,7 @@ class Plik_z_adresatami{
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    int idOstatniegoAdresata;
 
 public:
 
@@ -31,7 +32,7 @@ public:
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     void dopiszAdresataDoPliku(Adresat adresat);
     int pobierz_ostatnie_id_adresata();
-    int idOstatniegoAdresata;
+    int pobierzZPlikuIdOstatniegoAdresata();
 
 };
 

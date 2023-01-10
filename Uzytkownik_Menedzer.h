@@ -1,5 +1,5 @@
-#ifndef UZYTKOWNIK_MENEDZER.H
-#define UZYTKOWNIK_MENEDZER.H
+#ifndef UZYTKOWNIKMENEDZER_H
+#define UZYTKOWNIKMENEDZER_H
 
 
 #include <iostream>

@@ -45,7 +45,7 @@ int UzytkownikMenedzer::pobierzIdNowegoUzytkownika() {
 
 bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
 
-    for (int i = 0; i < uzytkownicy.size(); i++) {
+    for (unsigned int i = 0; i < uzytkownicy.size(); i++) {
 
         if(uzytkownicy[i].pobierz_login() == login) {
             cout << endl << "Istnieje uzytkownik o takim loginie." << endl;
@@ -58,7 +58,7 @@ bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
 
 void UzytkownikMenedzer::wypisz_wszystkich_uzytkownikow(){
 
-    for (int i = 0; i < uzytkownicy.size(); i++){
+    for (unsigned int i = 0; i < uzytkownicy.size(); i++){
 
         cout << uzytkownicy[i].pobierz_Id() << endl;
         cout << uzytkownicy[i].pobierz_login() << endl;
@@ -138,11 +138,11 @@ void UzytkownikMenedzer::logowanieUzytkownika()
         itr++;
     }
 
-    /*
+
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
     // return 0; to samo co wyzej.
-*/
+
 }
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){

@@ -1,5 +1,5 @@
-#ifndef PLIK_Z_UZYTKOWNIKAMI.H
-#define PLIK_Z_UZYTKOWNIKAMI.H
+#ifndef PLIKZUZYTKOWNIKAMI_H
+#define PLIKZUZYTKOWNIKAMI_H
 
 #include <iostream>
 #include <vector>

@@ -10,7 +10,9 @@ void Adresat::ustaw_id(int nowe_id_adresata){
 
 void Adresat::ustaw_id_zalogowanego_uzytkownika(int nowe_id_zalogwanego_uzytkownika){
 
+    if(nowe_id_zalogwanego_uzytkownika >=0 ){
     idUzytkownika = nowe_id_zalogwanego_uzytkownika;
+    }
 
 }
 

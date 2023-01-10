@@ -6,39 +6,35 @@
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
-//    Plik_z_adresatami pliczek_z_adresatami;
 
-    Metody_pomocnicze metoda_pomocnicza;
-
-
-    adresat.ustaw_id(pliczek_z_adresatami.pobierz_ostatnie_id_adresata()+1); // hmm??? nie pobieram nic z pliku poki co. moze wartaloby po prostu zadeklarowac nowe_id = 0?
- //   adresat.ustaw_id_zalogowanego_uzytkownika (idZalogowanegoUzytkownika);
+    adresat.ustaw_id(pliczek_z_adresatami.pobierzZPlikuIdOstatniegoAdresata() +1);
+    adresat.ustaw_id_zalogowanego_uzytkownika (idZalogowanegoUzytkownika);// to jest do zrobienia dopiero kiedy siê zaloguje i bêdê mieæ menu..?
 
     string nowe_imie = "";
     cout << "Podaj imie: ";
-    nowe_imie = metoda_pomocnicza.wczytajLinie();
-    nowe_imie = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_imie);
+    nowe_imie = Metody_pomocnicze::wczytajLinie();
+    nowe_imie = Metody_pomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_imie);
     adresat.ustaw_imie(nowe_imie);
 
     string nowe_nazwisko= "";
     cout << "Podaj nazwisko: ";
-    nowe_nazwisko = metoda_pomocnicza.wczytajLinie();
-    nowe_nazwisko = metoda_pomocnicza.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_nazwisko);
+    nowe_nazwisko = Metody_pomocnicze::wczytajLinie();
+    nowe_nazwisko = Metody_pomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nowe_nazwisko);
     adresat.ustaw_nazwisko(nowe_nazwisko);
 
     string nowy_nr= "";
     cout << "Podaj numer telefonu: ";
-    nowy_nr = metoda_pomocnicza.wczytajLinie();
+    nowy_nr = Metody_pomocnicze::wczytajLinie();
     adresat.ustaw_nr_telefonu(nowy_nr);
 
     string nowy_email= "";
     cout << "Podaj email: ";
-    nowy_email = metoda_pomocnicza.wczytajLinie();
+    nowy_email = Metody_pomocnicze::wczytajLinie();
     adresat.ustaw_email(nowy_email);
 
     string nowy_adres= "";
     cout << "Podaj adres: ";
-    nowy_adres = metoda_pomocnicza.wczytajLinie();
+    nowy_adres = Metody_pomocnicze::wczytajLinie();
     adresat.ustaw_adres(nowy_adres);
 
     return adresat;
@@ -47,7 +43,6 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 void AdresatMenedzer::dodajAdresata()
 {
     Adresat adresat;
-  //  Plik_z_adresatami pliczek_z_adresatami;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
