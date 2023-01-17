@@ -24,8 +24,6 @@ private:
     Uzytkownik  pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
     Plik_z_uzytkownikami plikZUzytkownikami;
 
-
-
 public:
 
     UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){};
@@ -36,7 +34,6 @@ public:
     int pobierzIdZalogowanegoUzytkownika();
     void logowanieUzytkownika();
     void wylogowanie_Uzytkownika();
-
 
 };
 

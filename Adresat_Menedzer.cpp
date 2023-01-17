@@ -2,13 +2,14 @@
 #include "Metody_pomocnicze.h"
 #include "Plik_z_Adresatami.h"
 #include "Uzytkownik_Menedzer.h"
+#include "Adresaci.h"
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
     adresat.ustaw_id(pliczek_z_adresatami.pobierzZPlikuIdOstatniegoAdresata() +1);
-    adresat.ustaw_id_zalogowanego_uzytkownika (idZalogowanegoUzytkownika);// to jest do zrobienia dopiero kiedy siê zaloguje i bêdê mieæ menu..?
+    adresat.ustaw_id_zalogowanego_uzytkownika(idZalogowanegoUzytkownika);
 
     string nowe_imie = "";
     cout << "Podaj imie: ";
@@ -55,6 +56,7 @@ void AdresatMenedzer::dodajAdresata()
 
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
+    adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 
     system("cls");
     if (!adresaci.empty())
@@ -85,8 +87,16 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierz_adres() << endl;
 }
 
-void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(){
 
-    adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(AdresatMenedzer::idZalogowanegoUzytkownika);
+void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika){
+
+    adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+
+}
+
+
+void AdresatMenedzer::ustaw_id_zalogowanego_uzytkownika(int nowy_idik){
+
+    idZalogowanegoUzytkownika = nowy_idik;
 
 }

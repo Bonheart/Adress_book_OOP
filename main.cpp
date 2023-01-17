@@ -7,13 +7,16 @@ int main() {
 
     Ksiazka_adresowa ksiazkaAdresowa("Uzytkownicy.txt","Adresat.txt");
 
- //   ksiazkaAdresowa.rejestracjaUzytkownika();
+    //ksiazkaAdresowa.rejestracjaUzytkownika();
     ksiazkaAdresowa.logowanieUzytkownika();
   //  ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-  //  ksiazkaAdresowa.wylogowanie_uzytkownika();
-  //  ksiazkaAdresowa.wypisz_wszystkich_uzytkownikow();
+    ksiazkaAdresowa.wylogowanie_uzytkownika();
+    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
-    ksiazkaAdresowa.dodajAdresata();
+    ksiazkaAdresowa.logowanieUzytkownika();
+
+  //  ksiazkaAdresowa.wypisz_wszystkich_uzytkownikow();
+   // ksiazkaAdresowa.dodajAdresata();
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
     return 0;

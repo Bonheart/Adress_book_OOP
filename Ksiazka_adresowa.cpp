@@ -22,7 +22,8 @@ void Ksiazka_adresowa::zmianaHaslaZalogowanegoUzytkownika(){
 void Ksiazka_adresowa::logowanieUzytkownika(){
 
     uzytkownikMenedzer.logowanieUzytkownika();
-
+    int id_zalogowanego_uzytkownika = uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika(); // sta³a ktora do ktorej zgarne idka zalogowanego uzytkownika.
+    adresat_menedzer.ustaw_id_zalogowanego_uzytkownika(id_zalogowanego_uzytkownika);
 }
 
 void Ksiazka_adresowa::wylogowanie_uzytkownika(){

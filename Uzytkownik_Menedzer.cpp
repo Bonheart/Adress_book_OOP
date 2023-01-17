@@ -138,7 +138,6 @@ void UzytkownikMenedzer::logowanieUzytkownika()
         itr++;
     }
 
-
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
     // return 0; to samo co wyzej.
@@ -150,6 +149,7 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){
     return idZalogowanegoUzytkownika;
 
 }
+
 
 void UzytkownikMenedzer::wylogowanie_Uzytkownika(){
 

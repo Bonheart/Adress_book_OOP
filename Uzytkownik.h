@@ -12,7 +12,7 @@ class Uzytkownik {
     string haslo ;
 
     public :
-         // settery
+    // settery
     void ustaw_id(int nowe_id);
     void ustaw_login(string nowy_login);
     void ustaw_haslo(string nowe_haslo);
@@ -21,7 +21,6 @@ class Uzytkownik {
     int pobierz_Id();
     string pobierz_login();
     string pobierz_haslo();
-
 
 };
 #endif // UZYTKOWNIK_H
