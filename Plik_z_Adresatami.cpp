@@ -57,11 +57,12 @@ vector <Adresat> Plik_z_adresatami::wczytajAdresatowZalogowanegoUzytkownikaZPlik
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
 
     if (plikTekstowy.good() == true) {
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami)) {
             if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami)) {
+
                 adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
                 adresaci.push_back(adresat);
             }
@@ -104,11 +105,11 @@ string Plik_z_adresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiK
     return liniaZDanymiAdresata;
 }
 
-void Plik_z_adresatami::dopiszAdresataDoPliku(Adresat adresat) {
+bool Plik_z_adresatami::dopiszAdresataDoPliku(Adresat adresat) {
 
     string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
-    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::out | ios::app);
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::out | ios::app);
 
     if (plikTekstowy.good() == true) {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
@@ -118,16 +119,15 @@ void Plik_z_adresatami::dopiszAdresataDoPliku(Adresat adresat) {
         } else {
             plikTekstowy << endl << liniaZDanymiAdresata ;
         }
-    } else {
-        cout << "Nie udalo sie otworzyc pliku i zapisac w nim danych." << endl;
-    }
 
     idOstatniegoAdresata++;
-
     plikTekstowy.close();
-    system("pause");
+    return true;
+}
+return false;
 }
 
+/*
 int Plik_z_adresatami::pobierzZPlikuIdOstatniegoAdresata() {
     int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
@@ -147,7 +147,12 @@ int Plik_z_adresatami::pobierzZPlikuIdOstatniegoAdresata() {
     }
     return idOstatniegoAdresata;
 }
+*/
 
+int Plik_z_adresatami::pobierz_ostatnie_id_adresata(){
+
+    return idOstatniegoAdresata;
+}
 
 bool Plik_z_adresatami::czyPlikJestPusty(fstream &plikTekstowy) {
     plikTekstowy.seekg(0, ios::end);

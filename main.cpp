@@ -6,18 +6,51 @@ using namespace std;
 int main() {
 
     Ksiazka_adresowa ksiazkaAdresowa("Uzytkownicy.txt","Adresat.txt");
+    char choice;
 
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    ksiazkaAdresowa.logowanieUzytkownika();
-  //  ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
-    ksiazkaAdresowa.wylogowanie_uzytkownika();
-    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+    while (true) {
 
-    ksiazkaAdresowa.logowanieUzytkownika();
+        if(ksiazkaAdresowa.czyUzytkownikJestZalogowany() != true) {
 
-  //  ksiazkaAdresowa.wypisz_wszystkich_uzytkownikow();
-   // ksiazkaAdresowa.dodajAdresata();
-    ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+            choice = ksiazkaAdresowa.wybierzOpcjeZMenuGlownego();
+
+            switch(choice) {
+
+            case '1':
+                ksiazkaAdresowa.rejestracjaUzytkownika();
+                break;
+
+            case '2':
+                ksiazkaAdresowa.logowanieUzytkownika();
+                break;
+
+            case '9':
+                exit(0);
+            }
+        } else {
+
+            choice = ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
+
+            switch (choice) {
+
+        case '1':
+            ksiazkaAdresowa.dodajAdresata();
+            break;
+        case '4':
+            ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+            break;
+        case '7':
+            ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
+            break;
+        case '8':
+            ksiazkaAdresowa.wylogowanie_uzytkownika();
+            break;
+
+            }
+
+        }
+
+    }
 
     return 0;
 }

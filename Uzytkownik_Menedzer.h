@@ -26,14 +26,20 @@ private:
 
 public:
 
-    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){};
+    UzytkownikMenedzer(string nazwaPlikuZUzytkownikami) : plikZUzytkownikami(nazwaPlikuZUzytkownikami){
+
+        idZalogowanegoUzytkownika = 0;
+        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+
+    };
     void rejestracjaUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
     void wypisz_wszystkich_uzytkownikow();
-    void wczytajUzytkownikowZPliku();
     int pobierzIdZalogowanegoUzytkownika();
-    void logowanieUzytkownika();
+    int logowanieUzytkownika();
     void wylogowanie_Uzytkownika();
+    bool czyUzytkownikJestZalogowany();
+
 
 };
 

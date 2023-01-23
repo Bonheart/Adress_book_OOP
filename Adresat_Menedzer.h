@@ -17,17 +17,20 @@ class AdresatMenedzer {
     Adresat pobierzDaneAdresata();
     Plik_z_adresatami pliczek_z_adresatami;
     vector <Adresat> adresaci;
-    int idZalogowanegoUzytkownika;
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA; // powstala stala aby zadna metoda nie zmienila jej.
 
 public:
 
-    AdresatMenedzer (string nazwaPlikuZAdresatami) : pliczek_z_adresatami(nazwaPlikuZAdresatami){};
+    AdresatMenedzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) : pliczek_z_adresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika){
+
+        adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+
+    };
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void ustaw_id_zalogowanego_uzytkownika(int idZalogowanegoUzytkownika);
-
-
+    int ustawIdOstatniegoAdresata (int noweIdOstatniegoAdresata);
 };
 
 #endif // ADRESAT_MENEDZER

@@ -67,12 +67,6 @@ void UzytkownikMenedzer::wypisz_wszystkich_uzytkownikow(){
     }
 }
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
-
-  uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-
-}
-
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 {
 
@@ -100,7 +94,7 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
 }
 
 
-void UzytkownikMenedzer::logowanieUzytkownika()
+int UzytkownikMenedzer::logowanieUzytkownika()
 {
     Uzytkownik uzytkownik;
     vector <Uzytkownik> uzytkownicy;
@@ -127,7 +121,7 @@ void UzytkownikMenedzer::logowanieUzytkownika()
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika = itr -> pobierz_Id(); // w tym miejscu musze przypierdolic idzalogowanego jelopa, inaczej nie bedzie moglo pobrac pozniej id'ka do zmiany hasla
-                    return; // musze zwrocic returna, inaczej bym sie zapetlal tylko.
+                    return idZalogowanegoUzytkownika; // musze zwrocic returna, inaczej bym sie zapetlal tylko.
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo. :)) " << endl;
@@ -140,7 +134,7 @@ void UzytkownikMenedzer::logowanieUzytkownika()
 
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    // return 0; to samo co wyzej.
+     return 0; //to samo co wyzej.
 
 }
 
@@ -150,6 +144,15 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){
 
 }
 
+bool UzytkownikMenedzer:: czyUzytkownikJestZalogowany(){
+
+    if(idZalogowanegoUzytkownika > 0){
+        return true;
+    }
+    else
+        return false;
+
+}
 
 void UzytkownikMenedzer::wylogowanie_Uzytkownika(){
 

@@ -8,8 +8,8 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
 
-    adresat.ustaw_id(pliczek_z_adresatami.pobierzZPlikuIdOstatniegoAdresata() +1);
-    adresat.ustaw_id_zalogowanego_uzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustaw_id(pliczek_z_adresatami.pobierz_ostatnie_id_adresata() + 1);
+    adresat.ustaw_id_zalogowanego_uzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     string nowe_imie = "";
     cout << "Podaj imie: ";
@@ -50,13 +50,18 @@ void AdresatMenedzer::dodajAdresata()
     adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
-    pliczek_z_adresatami.dopiszAdresataDoPliku(adresat);
+
+    if (pliczek_z_adresatami.dopiszAdresataDoPliku(adresat))
+        cout <<"dodano adresata" << endl;
+    else
+        cout << "nie dodano adresata" << endl;
+    system ("pause");
 
 }
 
 void AdresatMenedzer::wyswietlWszystkichAdresatow()
 {
-    adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     system("cls");
     if (!adresaci.empty())
@@ -87,10 +92,16 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Adres:              " << adresat.pobierz_adres() << endl;
 }
 
-
+/*
 void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika){
 
-    adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+    idOstatniegoAdresata = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
+
+}
+
+int AdresatMenedzer::ustawIdOstatniegoAdresata (int noweIdOstatniegoAdresata){
+
+    idOstatniegoAdresata = noweIdOstatniegoAdresata;
 
 }
 
@@ -100,3 +111,4 @@ void AdresatMenedzer::ustaw_id_zalogowanego_uzytkownika(int nowy_idik){
     idZalogowanegoUzytkownika = nowy_idik;
 
 }
+*/

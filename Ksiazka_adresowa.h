@@ -2,6 +2,7 @@
 #include "Uzytkownik_Menedzer.h"
 #include "Adresat_Menedzer.h"
 #include "Adresaci.h"
+#include "Metody_pomocnicze.h"
 
 
 using namespace std;
@@ -9,13 +10,20 @@ using namespace std;
 class Ksiazka_adresowa {
 
     UzytkownikMenedzer uzytkownikMenedzer;
-    AdresatMenedzer adresat_menedzer;
+    AdresatMenedzer *adresat_menedzer;
+    const string NAZWA_PLIKU_Z_ADRESATAMI;
 
 public:
 
-    Ksiazka_adresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami), adresat_menedzer(nazwaPlikuZAdresatami) {
+    Ksiazka_adresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
 
-        uzytkownikMenedzer.wczytajUzytkownikowZPliku();
+        adresat_menedzer = NULL; // w konstruktorze od kopa ustawiam na NULL, zeby nie spocic sie pozniej.
+
+    };
+    ~Ksiazka_adresowa(){ //sprzata dana klase po robocie.
+
+        delete adresat_menedzer;
+        adresat_menedzer = NULL;
 
     };
 
@@ -30,4 +38,9 @@ public:
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanie_uzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
+    bool czyUzytkownikJestZalogowany();
+
+    char wybierzOpcjeZMenuUzytkownika();
+    char wybierzOpcjeZMenuGlownego();
 };

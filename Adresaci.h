@@ -18,6 +18,18 @@ private:
 
 public:
 
+    Adresat(int id = 0, int idUzytkownika = 0, string imie = "", string nazwisko = "", string nr_telefonu = "", string email = "", string adres = "")
+    {
+        this -> id = id;
+        this -> idUzytkownika = idUzytkownika;
+        this -> imie = imie;
+        this -> nazwisko = nazwisko;
+        this -> nr_telefonu = nr_telefonu;
+        this -> email = email;
+        this -> adres = adres;
+
+    }
+
     void ustaw_id(int nowe_id_adresata);
     void ustaw_id_zalogowanego_uzytkownika(int nowe_id_zalogowanego_uzytkownika);
     void ustaw_imie(string nowe_imie);
