@@ -91,24 +91,3 @@ void AdresatMenedzer::wyswietlDaneAdresata(Adresat adresat)
     cout << "Email:              " << adresat.pobierz_email() << endl;
     cout << "Adres:              " << adresat.pobierz_adres() << endl;
 }
-
-/*
-void AdresatMenedzer::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika){
-
-    idOstatniegoAdresata = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
-
-}
-
-int AdresatMenedzer::ustawIdOstatniegoAdresata (int noweIdOstatniegoAdresata){
-
-    idOstatniegoAdresata = noweIdOstatniegoAdresata;
-
-}
-
-
-void AdresatMenedzer::ustaw_id_zalogowanego_uzytkownika(int nowy_idik){
-
-    idZalogowanegoUzytkownika = nowy_idik;
-
-}
-*/

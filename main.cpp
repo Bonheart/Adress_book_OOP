@@ -6,6 +6,7 @@ using namespace std;
 int main() {
 
     Ksiazka_adresowa ksiazkaAdresowa("Uzytkownicy.txt","Adresat.txt");
+
     char choice;
 
     while (true) {

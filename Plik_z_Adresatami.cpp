@@ -128,7 +128,7 @@ return false;
 }
 
 /*
-int Plik_z_adresatami::pobierzZPlikuIdOstatniegoAdresata() {
+int Plik_z_adresatami::pobierzZPlikuIdOstatniegoAdresata() { // to bylo na poczatku, przed tworzeniem MENU i opieraniu sie na wskaznikach.
     int idOstatniegoAdresata = 0;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     string daneOstaniegoAdresataWPliku = "";
