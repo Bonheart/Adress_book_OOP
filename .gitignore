@@ -1,6 +1,6 @@
 .swp
 Obiektówka_cwiczenie.cbp
-obj/
+obj/Debug/Ksiazka_adresowa.o
 bin
 1.cscope_file_list
 2.depend
@@ -11,7 +11,8 @@ Adress_book_OOP
 Adresat.txt
 ks-strukt.cpp
 Debug
-Obiekt\303\263wka_cwiczenie.depend
+Obiekt303263wka_cwiczenie.depend
+"Obiekt\303\263wka_cwiczenie.layout"
 Obiektówka_cwiczenie.depend
 Obiektówka_cwiczenie.layout
 q

@@ -85,3 +85,29 @@ char Ksiazka_adresowa::wybierzOpcjeZMenuGlownego(){
     return Metody_pomocnicze::wybierzOpcjeZMenuGlownego();
 
 }
+
+void Ksiazka_adresowa::wyszukajAdresatowPoImieniu(){
+
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()==true)
+    adresat_menedzer->wyszukajAdresatowPoImieniu();
+    else
+        cout << "uzytkownik niezalogowany" << endl;
+
+}
+
+void Ksiazka_adresowa::wyszukajAdresatowPoNazwisku(){
+
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+        adresat_menedzer->wyszukajAdresatowPoNazwisku();
+
+    else
+        cout << "uzytkownik niezalogowany" << endl;
+
+
+}
+
+int Ksiazka_adresowa::usunAdresata(){
+
+   return adresat_menedzer->usunAdresata();
+
+}

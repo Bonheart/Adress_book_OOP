@@ -18,8 +18,8 @@ private:
 
 public:
 
-    Adresat(int id = 0, int idUzytkownika = 0, string imie = "", string nazwisko = "", string nr_telefonu = "", string email = "", string adres = "")
-    {
+    Adresat(int id = 0, int idUzytkownika = 0, string imie = "", string nazwisko = "", string nr_telefonu = "", string email = "", string adres = ""){
+
         this -> id = id;
         this -> idUzytkownika = idUzytkownika;
         this -> imie = imie;

@@ -40,6 +40,9 @@ public:
     void wylogowanie_uzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
     bool czyUzytkownikJestZalogowany();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    int usunAdresata();
 
     char wybierzOpcjeZMenuUzytkownika();
     char wybierzOpcjeZMenuGlownego();

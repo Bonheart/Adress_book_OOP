@@ -18,6 +18,7 @@ using namespace std;
 class Plik_z_adresatami{
 
     const string NAZWA_PLIKU_Z_ADRESATAMI ;
+    string NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWY = "Adresat2.txt";
     fstream plikTekstowy;
     bool czyPlikJestPusty(fstream &plikTekstowy);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
@@ -36,6 +37,7 @@ public:
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     bool dopiszAdresataDoPliku(Adresat adresat);
     int pobierz_ostatnie_id_adresata();
+    int usun_adresata_z_pliku(int id_usuwanego_adresata);
 };
 
 #endif // PLIK_Z_ADRESATAMI

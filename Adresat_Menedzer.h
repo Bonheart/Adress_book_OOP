@@ -10,14 +10,13 @@
 
 class AdresatMenedzer {
 
-    Adresat podajDaneNowegoAdresata();
+    Plik_z_adresatami pliczek_z_adresatami; // zapytac Paw³a o to - kiedy dam ta klase pod Adresata, wywala b³êdy. <<<--- zapytaæ.
 
-    void wyswietlDaneAdresata(Adresat adresat);
-
-    Adresat pobierzDaneAdresata();
-    Plik_z_adresatami pliczek_z_adresatami;
-    vector <Adresat> adresaci;
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA; // powstala stala aby zadna metoda nie zmienila jej.
+    vector <Adresat> adresaci;
+    void wyswietlDaneAdresata(Adresat adresat);
+    Adresat podajDaneNowegoAdresata();
+    Adresat pobierzDaneAdresata();
 
 public:
 
@@ -31,6 +30,13 @@ public:
     void wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void ustaw_id_zalogowanego_uzytkownika(int idZalogowanegoUzytkownika);
     int ustawIdOstatniegoAdresata (int noweIdOstatniegoAdresata);
+    void wyszukajAdresatowPoImieniu();
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
+    void wyszukajAdresatowPoNazwisku();
+    int usunAdresata();
+    int podajIdWybranegoAdresata();
+    void edytujAdresata();
+    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
 };
 
 #endif // ADRESAT_MENEDZER

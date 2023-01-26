@@ -161,3 +161,36 @@ bool Plik_z_adresatami::czyPlikJestPusty(fstream &plikTekstowy) {
     else
         return false;
 }
+
+int Plik_z_adresatami::usun_adresata_z_pliku(int id_usuwanego_adresata){
+
+    fstream plikTekstowy, plik_tymczasowy;
+
+    int id_adresata_do_usuniecia = 0;
+
+    string dane_adresata = "";
+
+    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI,ios::in);
+    plik_tymczasowy.open(NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWY, ios::out | ios::app);
+
+    if(plikTekstowy.good()){
+
+        while(getline(plikTekstowy,dane_adresata)){
+
+            id_adresata_do_usuniecia = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(dane_adresata);
+
+            if(id_adresata_do_usuniecia != id_usuwanego_adresata){
+
+                plik_tymczasowy << dane_adresata << endl;
+
+            }
+        }
+    }
+    plikTekstowy.close();
+    plik_tymczasowy.close();
+
+    remove(NAZWA_PLIKU_Z_ADRESATAMI);
+    rename(NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWY,NAZWA_PLIKU_Z_ADRESATAMI);
+    return id_usuwanego_adresata;
+
+}
