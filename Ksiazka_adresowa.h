@@ -15,7 +15,7 @@ class Ksiazka_adresowa {
 
 public:
 
-    Ksiazka_adresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
+    Ksiazka_adresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami): uzytkownikMenedzer(nazwaPlikuZUzytkownikami), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) { // w tym miejscu nastepuje przeciazenie.
 
         adresat_menedzer = NULL; // w konstruktorze od kopa ustawiam na NULL, zeby nie spocic sie pozniej.
 
@@ -43,6 +43,7 @@ public:
     void wyszukajAdresatowPoImieniu();
     void wyszukajAdresatowPoNazwisku();
     int usunAdresata();
+    void edytujAdresata();
 
     char wybierzOpcjeZMenuUzytkownika();
     char wybierzOpcjeZMenuGlownego();

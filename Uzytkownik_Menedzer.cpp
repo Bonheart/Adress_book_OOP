@@ -81,14 +81,10 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     {
         if (itr -> pobierz_Id() == idZalogowanegoUzytkownika)
         {
-     //       cout << "id zalogowanego: " << idZalogowanegoUzytkownika << endl; // sprawdzenie czy faktycznie tu jest moj uzytkownik.
             itr -> ustaw_haslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
             system("pause");
         }
-      //  else{
-       //     cout << "couldnt find user" << endl;
-       // }
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }

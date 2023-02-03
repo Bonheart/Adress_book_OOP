@@ -22,11 +22,12 @@ void Ksiazka_adresowa::zmianaHaslaZalogowanegoUzytkownika() {
 void Ksiazka_adresowa::logowanieUzytkownika() {
 
     uzytkownikMenedzer.logowanieUzytkownika();
+
     if (uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
 
         adresat_menedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
 
-   }
+    }
 }
 
 int Ksiazka_adresowa::pobierzIdZalogowanegoUzytkownika() {
@@ -47,6 +48,7 @@ void Ksiazka_adresowa::wylogowanie_uzytkownika() {
 void Ksiazka_adresowa::dodajAdresata() {
 
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+
         adresat_menedzer->dodajAdresata(); // jezeli pracuje na wskazniku, zeby wywolac metode na ktory wskazuje wskaznik, musze uzyc tej strzalki zamiast kropki.
     }
 
@@ -59,7 +61,9 @@ void Ksiazka_adresowa::dodajAdresata() {
 void Ksiazka_adresowa::wyswietlWszystkichAdresatow() {
 
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+
         adresat_menedzer->wyswietlWszystkichAdresatow();
+
     }
 
     else {
@@ -68,36 +72,39 @@ void Ksiazka_adresowa::wyswietlWszystkichAdresatow() {
 
 }
 
-char Ksiazka_adresowa::wybierzOpcjeZMenuUzytkownika(){
+char Ksiazka_adresowa::wybierzOpcjeZMenuUzytkownika() {
 
-   return Metody_pomocnicze::wybierzOpcjeZMenuUzytkownika();
+    return Metody_pomocnicze::wybierzOpcjeZMenuUzytkownika();
 
 }
 
-bool Ksiazka_adresowa::czyUzytkownikJestZalogowany(){
+bool Ksiazka_adresowa::czyUzytkownikJestZalogowany() {
 
     return uzytkownikMenedzer.czyUzytkownikJestZalogowany();
 
 }
 
-char Ksiazka_adresowa::wybierzOpcjeZMenuGlownego(){
+char Ksiazka_adresowa::wybierzOpcjeZMenuGlownego() {
 
     return Metody_pomocnicze::wybierzOpcjeZMenuGlownego();
 
 }
 
-void Ksiazka_adresowa::wyszukajAdresatowPoImieniu(){
+void Ksiazka_adresowa::wyszukajAdresatowPoImieniu() {
 
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()==true)
-    adresat_menedzer->wyszukajAdresatowPoImieniu();
+
+        adresat_menedzer->wyszukajAdresatowPoImieniu();
+
     else
         cout << "uzytkownik niezalogowany" << endl;
 
 }
 
-void Ksiazka_adresowa::wyszukajAdresatowPoNazwisku(){
+void Ksiazka_adresowa::wyszukajAdresatowPoNazwisku() {
 
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany())
+
         adresat_menedzer->wyszukajAdresatowPoNazwisku();
 
     else
@@ -106,8 +113,14 @@ void Ksiazka_adresowa::wyszukajAdresatowPoNazwisku(){
 
 }
 
-int Ksiazka_adresowa::usunAdresata(){
+int Ksiazka_adresowa::usunAdresata() {
 
-   return adresat_menedzer->usunAdresata();
+    return adresat_menedzer->usunAdresata();
+
+}
+
+void Ksiazka_adresowa::edytujAdresata() {
+
+    return adresat_menedzer -> edytujAdresata();
 
 }

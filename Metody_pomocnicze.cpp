@@ -3,34 +3,34 @@
 #include <algorithm>
 
 
-string Metody_pomocnicze::konwerjsaIntNaString(int liczba)
-{
+string Metody_pomocnicze::konwerjsaIntNaString(int liczba) {
+
     ostringstream ss;
     ss << liczba;
     string str = ss.str();
     return str;
 }
 
-string Metody_pomocnicze::wczytajLinie()
-{
+string Metody_pomocnicze::wczytajLinie() {
+
     string wejscie = "";
     cin.sync();
     getline(cin, wejscie);
     return wejscie;
 }
 
-string Metody_pomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst)
-{
-    if (!tekst.empty())
-    {
+string Metody_pomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst) {
+
+    if (!tekst.empty()) {
+
         transform(tekst.begin(), tekst.end(), tekst.begin(), ::tolower);
         tekst[0] = toupper(tekst[0]);
     }
     return tekst;
 }
 
-int Metody_pomocnicze::konwersjaStringNaInt(string liczba)
-{
+int Metody_pomocnicze::konwersjaStringNaInt(string liczba) {
+
     int liczbaInt;
     istringstream iss(liczba);
     iss >> liczbaInt;
@@ -39,28 +39,27 @@ int Metody_pomocnicze::konwersjaStringNaInt(string liczba)
 }
 
 
-string Metody_pomocnicze::pobierzLiczbe(string tekst, int pozycjaZnaku)
-{
+string Metody_pomocnicze::pobierzLiczbe(string tekst, int pozycjaZnaku) {
+
     string liczba = "";
-    while(isdigit(tekst[pozycjaZnaku]) == true)
-    {
+
+    while(isdigit(tekst[pozycjaZnaku]) == true) {
+
         liczba += tekst[pozycjaZnaku];
         pozycjaZnaku ++;
     }
     return liczba;
 }
 
-char Metody_pomocnicze::wczytajZnak()
-{
+char Metody_pomocnicze::wczytajZnak() {
+
     string wejscie = "";
     char znak  = {0};
 
-    while (true)
-    {
+    while (true) {
         getline(cin, wejscie);
 
-        if (wejscie.length() == 1)
-        {
+        if (wejscie.length() == 1) {
             znak = wejscie[0];
             break;
         }
@@ -69,8 +68,8 @@ char Metody_pomocnicze::wczytajZnak()
     return znak;
 }
 
-char Metody_pomocnicze::wybierzOpcjeZMenuUzytkownika()
-{
+char Metody_pomocnicze::wybierzOpcjeZMenuUzytkownika() {
+
     char wybor;
 
     system("cls");
@@ -92,8 +91,8 @@ char Metody_pomocnicze::wybierzOpcjeZMenuUzytkownika()
     return wybor;
 }
 
-char Metody_pomocnicze::wybierzOpcjeZMenuGlownego()
-{
+char Metody_pomocnicze::wybierzOpcjeZMenuGlownego() {
+
     char wybor;
 
     system("cls");
@@ -109,25 +108,25 @@ char Metody_pomocnicze::wybierzOpcjeZMenuGlownego()
     return wybor;
 }
 
-int Metody_pomocnicze::wczytajLiczbeCalkowita()
-{
+int Metody_pomocnicze::wczytajLiczbeCalkowita() {
+
     string wejscie = "";
     int liczba = 0;
 
-    while (true)
-    {
+    while (true) {
+
         getline(cin, wejscie);
 
         stringstream myStream(wejscie);
         if (myStream >> liczba)
             break;
         cout << "To nie jest liczba. Wpisz ponownie. " << endl;
+
     }
     return liczba;
 }
 
-char Metody_pomocnicze::wybierzOpcjeZMenuEdycja()
-{
+char Metody_pomocnicze::wybierzOpcjeZMenuEdycja() {
     char wybor;
 
     cout << endl << "   >>> MENU  EDYCJA <<<" << endl;
