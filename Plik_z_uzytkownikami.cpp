@@ -105,6 +105,7 @@ void Plik_z_uzytkownikami::zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkowni
             if (itr == itrKoniec) {
 
                 plikTekstowy << liniaZDanymiUzytkownika;
+
             }
             else {
 
