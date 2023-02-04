@@ -16,27 +16,28 @@ using namespace std;
 
 
 
-class Plik_z_adresatami: public Pochodna
-{
+class Plik_z_adresatami: public Pochodna {
 
-   // const string NAZWA_PLIKU_Z_ADRESATAMI;
+    // const string NAZWA_PLIKU_Z_ADRESATAMI;
     string NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWY;
     fstream plikTekstowy;
-    bool czyPlikJestPusty(fstream &plikTekstowy);
+    bool czy_drugi_plik_jest_pusty(fstream &plikTekstowy);
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int idOstatniegoAdresata;
+    int id_usuwanego_adresata;
     void zmienNazwePliku(string stara_nazwa, string nowa_nazwa);
 
 
 public:
 
-    Plik_z_adresatami(string nazwa_pliku) : Pochodna(nazwa_pliku){ // zamiast sta³ej NAZWA_PLIKU_Z_ADRESATAMI wrzucam moja pochodna do konstruktora, a do jego cia³a, to co chce mieæ.
+    Plik_z_adresatami(string nazwa_pliku) : Pochodna(nazwa_pliku) { // zamiast sta³ej NAZWA_PLIKU_Z_ADRESATAMI wrzucam moja pochodna do konstruktora, a do jego cia³a, to co chce mieæ.
 
         NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWY = "Adresat2.txt";
 
         idOstatniegoAdresata = 0;
+        id_usuwanego_adresata = 0;
 
     };
 
@@ -46,6 +47,7 @@ public:
     int pobierz_ostatnie_id_adresata();
     int usun_adresata_z_pliku(int id_usuwanego_adresata);
     void zaktualizujDaneWybranegoAdresataWPliku(Adresat adresat);
+    int pobierzZPlikuIdOstatniegoAdresata();
 
 };
 

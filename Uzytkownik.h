@@ -11,7 +11,7 @@ class Uzytkownik {
     string login;
     string haslo ;
 
-    public :
+public :
     // settery
     void ustaw_id(int nowe_id);
     void ustaw_login(string nowy_login);

@@ -14,10 +14,10 @@ void Plik_z_uzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
 
         if (czyPlikJestPusty() == true) {
 
-            plikTekstowy << liniaZDanymiUzytkownika;
+            plikTekstowy <<liniaZDanymiUzytkownika;
         }
         else {
-            plikTekstowy << endl << liniaZDanymiUzytkownika ;
+            plikTekstowy << liniaZDanymiUzytkownika  << endl;
         }
     }
     else

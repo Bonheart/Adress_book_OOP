@@ -190,8 +190,7 @@ int AdresatMenedzer::usunAdresata() {
                 }
             }
         }
-    }
-    else {
+    } else {
         cout << "ksiazka adresowa jest pusta " << endl;
     }
     if (czyIstniejeAdresat == false) {

@@ -10,17 +10,18 @@
 
 class AdresatMenedzer {
 
-    Plik_z_adresatami pliczek_z_adresatami; // zapytac Paw³a o to - kiedy dam ta klase pod Adresata, wywala b³êdy. <<<--- zapytaæ.
-
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA; // powstala stala aby zadna metoda nie zmienila jej.
     vector <Adresat> adresaci;
     void wyswietlDaneAdresata(Adresat adresat);
     Adresat podajDaneNowegoAdresata();
     Adresat pobierzDaneAdresata();
 
+    Plik_z_adresatami pliczek_z_adresatami; // zapytac Paw³a o to - kiedy dam ta klase pod Adresata, wywala b³êdy. <<<--- zapytaæ.
+
+
 public:
 
-    AdresatMenedzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) : pliczek_z_adresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika){
+    AdresatMenedzer (string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika) : pliczek_z_adresatami(nazwaPlikuZAdresatami), ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika) {
 
         adresaci = pliczek_z_adresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 

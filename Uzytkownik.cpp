@@ -3,7 +3,7 @@
 void Uzytkownik::ustaw_id(int nowe_id) { // setter
 
     if(nowe_id >= 0)
-    id = nowe_id;
+        id = nowe_id;
 
 }
 

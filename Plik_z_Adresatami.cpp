@@ -119,7 +119,7 @@ bool Plik_z_adresatami::dopiszAdresataDoPliku(Adresat adresat) {
     if (plikTekstowy.good() == true) {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
 
-        if (czyPlikJestPusty(plikTekstowy) == true) {
+        if (czyPlikJestPusty() == true) {
 
             plikTekstowy << liniaZDanymiAdresata;
         } else {
@@ -134,21 +134,11 @@ bool Plik_z_adresatami::dopiszAdresataDoPliku(Adresat adresat) {
     return false;
 }
 
-
-
 int Plik_z_adresatami::pobierz_ostatnie_id_adresata() {
 
     return idOstatniegoAdresata;
 }
 
-bool Plik_z_adresatami::czyPlikJestPusty(fstream &plikTekstowy) {
-
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
-}
 
 int Plik_z_adresatami::usun_adresata_z_pliku(int id_usuwanego_adresata) {
 
@@ -169,9 +159,15 @@ int Plik_z_adresatami::usun_adresata_z_pliku(int id_usuwanego_adresata) {
 
             if(id_adresata_do_usuniecia != id_usuwanego_adresata) {
 
-                plik_tymczasowy << dane_adresata << endl;
+                if(czy_drugi_plik_jest_pusty(plik_tymczasowy)== true ) { // musze utworzyc dodatkowa zmienna sprawdzajaca ponownie czy plik jest pusty, inaczej bedzie w pliku tekstowym zamieszanie przy usuwaniu. to samo przy edycji.
 
+                    plik_tymczasowy << dane_adresata;
+
+                } else
+
+                    plik_tymczasowy << endl << dane_adresata;
             }
+
         }
     }
     plikTekstowy.close();
@@ -209,13 +205,25 @@ void Plik_z_adresatami::zaktualizujDaneWybranegoAdresataWPliku(Adresat adresat) 
 
         if (idAdresata != adresat.pobierz_id()) {
 
-            plik_tymczasowy << daneJednegoAdresataOddzielonePionowymiKreskami << endl;
+            if(czy_drugi_plik_jest_pusty(plik_tymczasowy) == true) {
 
+                plik_tymczasowy << daneJednegoAdresataOddzielonePionowymiKreskami;
+
+            } else {
+
+                plik_tymczasowy << endl << daneJednegoAdresataOddzielonePionowymiKreskami;
+
+            }
         }
 
         else {
 
-            plik_tymczasowy << liniaZDanymiAdresata << endl;
+            if(czy_drugi_plik_jest_pusty(plik_tymczasowy) == true) {
+
+                plik_tymczasowy << liniaZDanymiAdresata;
+
+            } else
+                plik_tymczasowy << endl << liniaZDanymiAdresata;
         }
 
     }
@@ -225,6 +233,31 @@ void Plik_z_adresatami::zaktualizujDaneWybranegoAdresataWPliku(Adresat adresat) 
 
     remove("Adresat.txt");
     zmienNazwePliku(NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWY, "Adresat.txt");
-
+}
+bool Plik_z_adresatami::czy_drugi_plik_jest_pusty(fstream &plikTekstowy) {
+    plikTekstowy.seekg(0, ios::end);
+    if (plikTekstowy.tellg() == 0)
+        return true;
+    else
+        return false;
 }
 
+int Plik_z_adresatami::pobierzZPlikuIdOstatniegoAdresata() {
+    string daneJednegoAdresataOddzielonePionowymiKreskami = "";
+    string daneOstaniegoAdresataWPliku = "";
+
+    fstream plikTekstowy;
+    plikTekstowy.open(pobieranie_nazwy_pliku().c_str(), ios::in);
+    if (plikTekstowy.good() == true) {
+        while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami)) {}
+        daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
+    } else
+        cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
+
+    plikTekstowy.close();
+
+    if (daneOstaniegoAdresataWPliku != "") {
+        idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
+    }
+    return idOstatniegoAdresata;
+}

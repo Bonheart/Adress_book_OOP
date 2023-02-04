@@ -20,7 +20,7 @@ public:
         adresat_menedzer = NULL; // w konstruktorze od kopa ustawiam na NULL, zeby nie spocic sie pozniej.
 
     };
-    ~Ksiazka_adresowa(){ //sprzata dana klase po robocie.
+    ~Ksiazka_adresowa() { //sprzata dana klase po robocie.
 
         delete adresat_menedzer;
         adresat_menedzer = NULL;

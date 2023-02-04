@@ -14,15 +14,15 @@ using namespace std;
 
 class Plik_z_uzytkownikami: public Pochodna {
 
-   // const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
-   // fstream plikTekstowy;
+    // const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
+    // fstream plikTekstowy;
 
-   // bool czyPlikJestPusty(fstream &plikTekstowy);
+    // bool czyPlikJestPusty(fstream &plikTekstowy);
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 public:
-    Plik_z_uzytkownikami(string nazwa_pliku): Pochodna(nazwa_pliku){}; // to samo co w przypadku pliku z adresatami.
+    Plik_z_uzytkownikami(string nazwa_pliku): Pochodna(nazwa_pliku) {}; // to samo co w przypadku pliku z adresatami.
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector <Uzytkownik> wczytajUzytkownikowZPliku();
     void zapiszWszystkichUzytkownikowDoPliku(vector <Uzytkownik> uzytkownicy);
