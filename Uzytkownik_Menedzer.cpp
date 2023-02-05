@@ -108,7 +108,7 @@ int UzytkownikMenedzer::logowanieUzytkownika() {
                 if (itr -> pobierz_haslo() == haslo) {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    idZalogowanegoUzytkownika = itr -> pobierz_Id(); // w tym miejscu musze przypierdolic idzalogowanego jelopa, inaczej nie bedzie moglo pobrac pozniej id'ka do zmiany hasla
+                    idZalogowanegoUzytkownika = itr -> pobierz_Id(); // w tym miejscu musze ID zalogowanego usera, inaczej nie bedzie moglo pobrac pozniej id'ka do zmiany hasla
                     return idZalogowanegoUzytkownika; // musze zwrocic returna, inaczej bym sie zapetlal tylko.
                 }
             }

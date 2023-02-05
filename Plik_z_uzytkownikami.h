@@ -17,7 +17,7 @@ class Plik_z_uzytkownikami: public Pochodna {
     // const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
     // fstream plikTekstowy;
 
-    // bool czyPlikJestPusty(fstream &plikTekstowy);
+    // bool czyPlikJestPusty(fstream &plikTekstowy); // usuwam te rzeczy. w pochodnych utworzylem odpowiednie metody
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 

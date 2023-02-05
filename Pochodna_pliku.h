@@ -9,7 +9,7 @@ using namespace std;
 class Pochodna {
 
 
-    const string NOWY_PLIK_JAKO_POCHODNA; // tworze nowa stala ktora pozniej bedzie dziedziczona
+    const string NOWY_PLIK_JAKO_POCHODNA; // tworze nowa stala ktora pozniej bedzie dziedziczona przez wszystkie classy
 
 
 public:
