@@ -26,7 +26,6 @@ class Plik_z_adresatami: public Pochodna {
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int idOstatniegoAdresata;
-    int id_usuwanego_adresata;
     void zmienNazwePliku(string stara_nazwa, string nowa_nazwa);
 
 
@@ -37,7 +36,6 @@ public:
         NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWY = "Adresat2.txt";
 
         idOstatniegoAdresata = 0;
-        id_usuwanego_adresata = 0;
 
     };
 

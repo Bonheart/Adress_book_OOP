@@ -1,8 +1,5 @@
 #include "Adresat_Menedzer.h"
-#include "Metody_pomocnicze.h"
-#include "Plik_z_Adresatami.h"
-#include "Uzytkownik_Menedzer.h"
-#include "Adresaci.h"
+
 
 Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
     Adresat adresat;
