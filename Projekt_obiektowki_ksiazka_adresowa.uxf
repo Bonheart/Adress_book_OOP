@@ -13,21 +13,43 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>48</x>
-      <y>0</y>
-      <w>152</w>
-      <h>304</h>
+      <x>96</x>
+      <y>96</y>
+      <w>288</w>
+      <h>344</h>
     </coordinates>
     <panel_attributes>Ksiazka Adresowa
 --
-&lt;&lt;construct&gt;&gt;KsiazkaAdresowa();</panel_attributes>
+- uzytkownikMenedzer:UzytkownikMenedzer;
+-*adresat_menedzer:AdresatMenedzer;
++ &lt;&lt;construct&gt;&gt;KsiazkaAdresowa();
++ ~ KsiazkaAdresowa();
++rejestracjaUzytkownika():void;
++wypisz_wszystkich_uzytkownikow():void;
++logowanieUzytkownika():void;
++podajDaneNowegoAdresata():void;
++dodajAdresata():void;
++wyswietlWszystkichAdresatow():void;
++wyswietlDaneAdresata():void;
++wczytajAdresatowZalogowanegoUzytkownikaZPliku():void;
++zmianaHaslaZalogowanegoUzytkownika():void;
++wylogowanie_uzytkownika():void;
++pobierzIdZalogowanegoUzytkownika():int;
++czyUzytkownikaJestZalogowany():bool;
++wyszukajAdresatowPoImieniu():void;
++wyszukajAdresatowPoNazwisku():void
++usunAdresata():int;
++edytujAdresata():void;
++wybierzOpcjeZMenuUzytkownika():char;
++wybierzOpcjeZMenuGlownego():char;
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>736</x>
-      <y>0</y>
+      <x>1192</x>
+      <y>200</y>
       <w>160</w>
       <h>304</h>
     </coordinates>
@@ -36,67 +58,64 @@
 -Id :int
 -login : string
 -haslo : string
+--
++ustaw_id():void;
++ustaw_login():void;
++ustaw_haslo():void;
++pobierz_Id():int;
++pobierz_login():string;
++pobierz_haslo():string;
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>0</y>
-      <w>192</w>
-      <h>304</h>
-    </coordinates>
-    <panel_attributes>Uzytkownik_Menedzer
---
--IdZalogowanegoUzytkownika : int
--vector &lt;Uzytkownik&gt; uzytkownicy
---
-&lt;&lt;construct&gt;&gt;Ksiazka_adresowa():
-+rejestracja_uzytkownika (): void
-+logowanie_uzytkownika (): int
-+Uzytkownik podajDaneNowegoUzytkownika();
--pobierzIdNowegoUzytkownika(): int
--czyIstniejeLogin():bool
--zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami():string
-+Wczytaj_uzytkownikow_z_pliku: void
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>392</x>
-      <y>0</y>
+      <x>680</x>
+      <y>112</y>
       <w>184</w>
       <h>304</h>
     </coordinates>
     <panel_attributes>Plik_z_uzytkownikami
 --
--nazwaPlikuZUzytkownikami: string
+-zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKresami:string;
+-pobierzDaneUzytkownika:Uzytkownik;
 --
-+czyPlikJestPusty():bool
-+dopiszUzytkownikaDoPliku():void</panel_attributes>
++ &lt;&lt;Construtc&gt;&gt; Plik_z_uzytkownikami();
++wczytajUzytkownikowZPliku();vector&lt;Uzytkownik&gt;;
++dopiszUzytkownikaDoPliku():void
++zapiszWszystkichUzytkownikowDoPliku():void;</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>576</x>
-      <y>0</y>
+      <x>960</x>
+      <y>208</y>
       <w>160</w>
-      <h>304</h>
+      <h>320</h>
     </coordinates>
     <panel_attributes>Metody_pomocnicze
 --
-+konwerjsaIntNaString():string</panel_attributes>
+_+konwerjsaIntNaString():string_
+_+wczytajLinie();string)_
+_zamienPierwszaLitereNaDuzaAPozostaleNaMale()_
+_konwersjaStringNaInt():int_
+_pobierzLiczbe():string_
+_wybierzOpcjeZMenuUzytkownika():char_
+_wczytajZnak():char_
+_wybierzOpcjeZMenuGlownego():char_
+_wczytajLiczbeCalkowita():int_
+_wybierzOpcjeZMenuEdycja():char;_
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>48</x>
-      <y>336</y>
+      <x>232</x>
+      <y>544</y>
       <w>152</w>
       <h>312</h>
     </coordinates>
@@ -115,14 +134,14 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>200</x>
-      <y>336</y>
+      <x>384</x>
+      <y>544</y>
       <w>240</w>
       <h>312</h>
     </coordinates>
     <panel_attributes>Adresat_menedzer
 --
-- Adresat podajDaneNowegoAdresata(): void
+Adresat podajDaneNowegoAdresata(): void
 + DodajAdresata():int
 + Adresat pobierzDaneAdresata;
 + wyswietlWszystkichAdresatow():void
@@ -133,15 +152,80 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>336</y>
-      <w>232</w>
-      <h>312</h>
+      <x>624</x>
+      <y>536</y>
+      <w>392</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>Plik z Adresatami
 --
-- wczytajAdresatowZalogowanegoUzytkownikaZPliku: int
-+ wyszukajAdresatowPoImieniu: void</panel_attributes>
+- wczytajAdresatowZalogowanegoUzytkownikaZPliku: int;
+- NAZWA_PLIKU_Z_ADRESATAMI_TYMCZASOWY:string;
+- plikTekstowy:fstream;
+- czy_drugi_plik_jest_pusty():bool;
+- pobierzDaneAdresata():Adresat;
+- pobierzIdAdresataZDanychOddzielonychPionowymiKreskami():int;
+- pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami():int;
+-idOstatniegoAdresata():int;
+-zmienNazwePliku():string;
+--
++ wyszukajAdresatowPoImieniu: void;
++ wczytajAdresatowZalogowanegoUzytkownikaZPliku():vector&lt;Adresat&gt;;
++ zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami():string;
++dopieszAdresataDoPliku():bool;
++pobierz_ostatnie_id_adresata():int;
++ usun_adresata_z_pliku():int;
++zaktualizujDaneWybranegoAdresataWPliku():void;
++ pobierzZPlikuIdOstatniegoAdresata():int;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1040</x>
+      <y>544</y>
+      <w>224</w>
+      <h>312</h>
+    </coordinates>
+    <panel_attributes>Pochodna_pliku
+--
+- NOWY_PLIK_JAKO_POCHODNA:string
+--
+&lt;&lt;construct&gt;&gt;  Podchodna
++ pobieranie_nazwy_pliku():string
++czyPlikJestPusty():bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>64</y>
+      <w>192</w>
+      <h>304</h>
+    </coordinates>
+    <panel_attributes>Uzytkownik_Menedzer
+--
+-IdZalogowanegoUzytkownika : int
+-vector &lt;Uzytkownik&gt; uzytkownicy
+- podajDaneNowegoUzytkownika();Uzytkownik;
+- uzytkownicy:vector&lt;Uzytkownik;
+- pobierzIdNowegoUzytkownika():int;
+- czyIstniejeLogin():bool;
+- pobierzDaneUzytkownika():Uzytkownik;
+- plikZUyztkownikami:Plik_z_uzytkownikami;
+--
+&lt;&lt;construct&gt;&gt;Ksiazka_adresowa():
++rejestracja_uzytkownika (): void
++zmianaHaslaZalogowanegoUzytkownika():void;
++ wypisz_wszystkich_uzytkownikow():void;
++pobierzIDZalogowanegoUzytkownika():int;
++logowanie_uzytkownika (): int
++Wczytaj_uzytkownikow_z_pliku: void
++czyUzytkownikJestZalogowany():bool;
++wylogowanieUzytkownika();void;
+</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
